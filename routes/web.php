@@ -19,3 +19,6 @@ Route::get('/plants', 'PageController@plants');
 Route::get('/poems', 'PageController@poems');
 Route::get('/recipes', 'PageController@recipes');
 Route::get('/about_me', 'PageController@about_me');
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
