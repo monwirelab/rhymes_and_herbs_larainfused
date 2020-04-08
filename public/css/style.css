@@ -1,0 +1,239 @@
+/**google font**/
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+@import url('http://fonts.googleapis.com/css?family=Great+Vibes');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+	font-family: 'Overpass',sans-serif;
+}
+
+/** INDEX - NAVIGATION BAR **/
+.navcontent{
+    top: 0;
+    position: fixed;
+    z-index: 99999;
+    padding:15px 0;
+    width: 100vw;
+    background: rgba(0,0,0,0.20);
+    height: 80px;
+}
+.navinner {
+    max-width: 1150px;
+    margin: auto;
+}
+.navlinks {
+    float: right;
+    align-items: center;
+    display: flex;
+    min-height: 50px;
+}
+.navlinks li {
+    margin-left: 10px;
+    margin-right: 8px;
+    padding: 12px 17px;
+}
+.navcontent .navinner ul.navlinks li a {
+	color: #fff;
+	font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+.navcontent .navinner ul.navlinks li.active,
+.navcontent .navinner ul.navlinks li:hover{
+	color: #000;
+}
+.navcontent .navinner ul.navlinks li:hover{
+	background:#746263;
+    color: #000;
+    transition: .3s linear;
+}
+
+/** PAGES - NAVIGATION BAR **/
+.navcontent_pages{
+    height: 100px;
+    padding:15px 0;
+    width: 100%;
+    background: #E1b4b2;
+}
+.navcontent_pages .navinner ul.navlinks li a {
+	color: #fff;
+	font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+.navcontent_pages .navinner ul.navlinks li.active,
+.navcontent_pages .navinner ul.navlinks li:hover{
+	color: #000;
+}
+.navcontent_pages .navinner ul.navlinks li.active,
+.navcontent_pages .navinner ul.navlinks li:hover{
+	background:#746263;
+    color: #000;
+    transition: .3s linear;
+}
+
+/** PAGE HEADING **/
+.rh-case {
+    height: 200px;
+    margin: 0;
+    padding: 0;
+}
+.rh-case img {
+    display: block;
+    margin: auto;
+    padding: 20px 0 10px 0;
+    width: 120px;
+}
+.rh-case h1 {
+    text-align: center;
+    font-family: 'Great Vibes', sans-serif;
+}
+.rh-case p {
+    text-align: center;
+    margin: 0;
+}
+
+/** SLIDES **/
+#carouselExampleIndicators {
+    position: relative;
+    height: 91vh;
+    width: 100%;
+}
+
+#carouselExampleIndicators .carousel-inner {
+    position: relative;
+    height: 91vh;
+    width: 100%;
+    background: #000;
+}
+#carouselExampleIndicators .carousel-inner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    /* background: rgba(0,0,0,0.30); */
+}
+#carouselExampleIndicators .carousel-inner::after {
+    position: absolute;
+    content: url(Photos/name.png);
+    left: 13%;
+    top: 30%;
+    z-index: 1;
+} 
+#carouselExampleIndicators .carousel-inner .carousel-item {
+    position: relative;
+    height: 91vh;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+}
+#carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 91vh;
+}
+
+/** PLANTS **/
+.plants-gallery {
+    width: 100%;
+    padding: 60px 0;
+    background: #f2f1e2;
+}
+.inner-gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.plants-gallery h2 {
+    text-align: center;
+    color: #333;
+}
+.p-border {
+    width: 200px;
+    height: 2px;
+    background: #333;
+    margin: 45px auto;
+}
+
+.plants-gallery .plants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.plants-gallery .p-image {
+    flex: 23%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 5px 5px;
+    opacity: 0;
+    transition: transform 5s .35s cubic-bezier(0,1,.3,1),
+                opacity .5s .35s ease-out;
+    will-change: transform, opacity;
+}
+.plants-gallery .p-image img {
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+.plants-gallery .p-image:hover img {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 960px) {
+    .plants-gallery .p-image {
+        flex: 33.33%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .plants-gallery .p-image {
+        flex: 50%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .plants-gallery .p-image {
+        flex: 100%;
+    }
+}
+.p-image.is-visible {
+    opacity: 1;
+  }
+
+/** FOOTER **/
+footer {
+    margin: auto;
+    background-color: #746263;
+}
+footer p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #eed9ce;
+}
+.footer-icons {
+    min-height: 15px;
+    padding: 8px 0 0 11px;
+    margin: 0;
+}
+.footer-icons a {
+    margin-left: 20px;
+    margin-right: 8px;
+    color: #eed9ce;
+    font-size: 18px;
+    padding: 7px 8px;
+    border-radius: 4px;
+}
+.footer-icons a:hover {
+    color: #F1E2CA;
+    background: #DDA797;
+    transition: .3s linear;
+}
